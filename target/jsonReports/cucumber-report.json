@@ -1,0 +1,161 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-11T18:53:07.261Z",
+        "line": 13,
+        "name": "Verify if place is being succesfully added usig AddPlaceAPI",
+        "description": "",
+        "id": "validating-place-apis;verify-if-place-is-being-succesfully-added-usig-addplaceapi;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3887812000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Add place Payload with \"RDhouse\" \"Marathi\" \"UK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"RDhouse\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"Marathi\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"UK\"",
+                  "offset": 43
+                }
+              ],
+              "location": "StepDefinations.StepDefination.add_place_payload_with(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3721726000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user call \"AddPlaceAPI\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceAPI\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefinations.StepDefination.user_call_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4843000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "API call got success with status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 33
+                }
+              ],
+              "location": "StepDefinations.StepDefination.api_call_got_success_with_status(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2477505000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefinations.StepDefination.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 31282000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 28
+                }
+              ],
+              "location": "StepDefinations.StepDefination.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3442259000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Verify place_id created that maps to \"RDhouse\" using \"getPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"RDhouse\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"getPlaceAPI\"",
+                  "offset": 53
+                }
+              ],
+              "location": "StepDefinations.StepDefination.verify_place_id_created_that_maps_to_using_get_place_api(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Addplace"
+          }
+        ]
+      }
+    ],
+    "name": "Validating place APIs",
+    "description": "",
+    "id": "validating-place-apis",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/placeValidation.feature",
+    "tags": []
+  }
+]
